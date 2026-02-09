@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Invaders - TypeScript Game Tutorial</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #000;
+        color: #0f0;
+        font-family: "Courier New", monospace;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        text-shadow: 0 0 10px #0f0;
+        letter-spacing: 0.1em;
+      }
+
+      .subtitle {
+        font-size: 0.9rem;
+        color: #0a0;
+        margin-bottom: 20px;
+      }
+
+      #game-canvas {
+        border: 2px solid #0f0;
+        box-shadow:
+          0 0 20px rgba(0, 255, 0, 0.3),
+          inset 0 0 20px rgba(0, 255, 0, 0.1);
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+      }
+
+      .info {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 0.8rem;
+        color: #0a0;
+        max-width: 600px;
+      }
+
+      .info p {
+        margin: 5px 0;
+      }
+
+      .controls {
+        margin-top: 15px;
+        padding: 15px;
+        border: 1px solid #0a0;
+        border-radius: 5px;
+        background: rgba(0, 255, 0, 0.05);
+      }
+
+      .controls h3 {
+        color: #0f0;
+        margin-bottom: 10px;
+        font-size: 1rem;
+      }
+
+      .control-row {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .control-group {
+        text-align: left;
+      }
+
+      .control-group strong {
+        color: #0f0;
+      }
+
+      a {
+        color: #0f0;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        #game-canvas {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>▼ SPACE INVADERS ▼</h1>
+    <p class="subtitle">A TypeScript Game Tutorial</p>
+
+    <canvas id="game-canvas"></canvas>
+
+    <div class="info">
+      <p>
+        Built with
+        <a href="https://github.com/ShaiSrc/tty" target="_blank"
+          >@shaisrc/tty</a
+        >
+        and
+        <a href="https://github.com/KilledByAPixel/ZzFX" target="_blank"
+          >ZzFX</a
+        >
+      </p>
+
+      <div class="controls">
+        <h3>Controls</h3>
+        <div class="control-row">
+          <div class="control-group">
+            <strong>Keyboard:</strong><br />
+            WASD / ← → Move<br />
+            SPACE Shoot<br />
+            P Pause<br />
+            R Restart
+          </div>
+          <div class="control-group">
+            <strong>Gamepad:</strong><br />
+            D-pad/Stick Move<br />
+            A Button Shoot<br />
+            START Pause<br />
+            B Button Restart
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
